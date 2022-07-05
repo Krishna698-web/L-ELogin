@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login and signup</title>
+    <link rel="stylesheet" href="lands.css">
+</head>
+
+<body>
+    <div class="form_container">
+        <div class="img">
+            <img src="/Images/loginandsignup/img1.jpg" alt="" id="img1">
+            <img src="/Images/loginandsignup/img2.jpg" alt="" id="img2">
+        </div>
+        <div class="forms">
+            <form action="" class="signup" id="signup">
+                <h1>SIGNUP</h1>
+                <div class="field">
+                    <input type="text" id="name" placeholder="name">
+                    <span></span>
+                    <label for="name">Username</label>
+                </div>
+                <div class="field">
+                    <input type="email" id="email" placeholder="email">
+                    <span></span>
+                    <label for="email">Email</label>
+                </div>
+                <div class="field">
+                    <input type="password" id="pswd" placeholder="password">
+                    <span></span>
+                    <label for="pswd">Password</label>
+                </div>
+                <button class="button signup_btn" onclick="">Signup</button>
+                <span class="orline">
+                    <p>Or</p>
+                    <hr>
+                </span>
+                <span class="end">Already have account? <a href="#" id="login_link" onclick="left_right();">Login</a> </span>
+            </form>
+            <form action="" class="login" id="login">
+                <h1>LOGIN</h1>
+                <div class="field">
+                    <input type="email" id="email" placeholder="email">
+                    <span></span>
+                    <label for="email">Email</label>
+                </div>
+                <div class="field">
+                    <input type="password" id="pswd" placeholder="password">
+                    <span></span>
+                    <label for="pswd">Password</label>
+                </div>
+                <button class="button login_btn" onclick="">Login</button>
+                <span class="orline">
+                    <p>Or</p>
+                    <hr>
+                </span>
+                <span class="end">Don't have account? <a href="#" id="signup_link" onclick="right_left();">Create one</a> </span>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    let login = document.getElementById('login');
+    let signup = document.getElementById('signup');
+    let signup_btn = document.querySelector('.signup_btn');
+    let login_btn = document.querySelector('.login_btn');
+    let img1 = document.getElementById('img1');
+    let img2 = document.getElementById('img2');
+    
+    let left_right = () =>{
+        login.style.right = '3rem';
+        signup.style.left = '-36rem';
+        img1.style.opacity = '0';
+        img1.style.transform = 'translate(0rem, -45rem)';
+        img2.style.opacity = '1';
+        img2.style.transform = "translate(-32rem, -40rem)";
+    }
+
+    let right_left = () =>{
+        login.style.right = '-35rem';
+        signup.style.left = '0rem';
+        img1.style.opacity = '1';
+        img1.style.transform = 'translate(0, 0)';
+        img2.style.opacity = '0';
+        img2.style.transform = 'translate(-32rem, 5rem)';
+    }
+</script>
+
+</html>
